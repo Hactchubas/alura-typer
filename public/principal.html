@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/libs/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/libs/google-fonts.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Alura Typer</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="center">Alura Typer</h1>
+        <p id="phrase" class="center">Frase contendo exatamente, nem uma a mais nem uma a menos do que quinze palavras</p>
+
+        <ul class="information center">
+            <li>
+                <i class="small material-icons icones">description</i>
+                <span class="nWords"></span> words
+            </li>
+            <li>
+                <i class="small material-icons icones">query_builder</i>
+                <span id="remainingTime">10</span> seconds
+            </li>
+        </ul>
+
+        <textarea name="typeField" id="typeField" cols="100" rows="5"></textarea>
+
+        <div id="botoes">
+            <a id="restartGameButton" class="btn-floating btn-large waves-effect waves-light red"><i
+                    class="material-icons">restore</i></a>
+        </div>
+
+        <ul class="inputInfo center">
+            <li><span class="wordsTyped">0</span> words</li>
+            <li><span class="charactersTyped">0</span> characters</li>
+        </ul>
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

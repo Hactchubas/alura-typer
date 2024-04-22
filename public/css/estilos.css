@@ -1,0 +1,30 @@
+.phrase{
+    font-size: 20px;
+    text-align: left;
+}
+
+#typeField{
+    font-size: 20px;
+    height: 130px;
+    
+}
+
+textarea{
+    border: 3px solid black;
+}
+
+.disabled_typeField{
+    background-color: lightgray;
+}
+
+.icones{
+    vertical-align: middle;
+}
+
+.correct_field{
+    border: 5px solid lightgreen;
+}
+
+.incorrect_field{
+    border: 5px solid red;
+}
