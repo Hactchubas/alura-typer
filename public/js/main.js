@@ -15,13 +15,16 @@ $(document).ready(function () {
 
     // Restart Game Click Event
     restartGameSetup();
+
+    // Score Buttons Setup
+    removeButtonStup(".removeButton");
 });
 
 
 // Count game phrase words
 function updatePhraseSize() {
-    let frase = $("#phrase").text();
-    $(".nWords").text(frase.split(" ").length);
+    let phrase = $("#phrase").text();
+    $(".nWords").text(phrase.split(/\S+/).length - 1);
 }
 
 
@@ -45,7 +48,7 @@ function restartGameSetup() {
 function counterInitializer() {
     $(".charactersTyped").text("0");
     $(".wordsTyped").text("0");
-    
+
     field.on("input", () => {
         countCharactersWords();
         checkTextValid();
@@ -94,18 +97,22 @@ function myClearIntervals(clearId) {
 function timer() {
     remainingTime = $("#remainingTime").text()
     if (remainingTime < 1) {
-        field.attr("disabled", true);
-
-        myClearIntervals();
-
-        field.toggleClass("disabled_typeField");
-
+        endGame();
         return
     }
     remainingTime--;
     $("#remainingTime").text(remainingTime);
 
 }
+
+function endGame() {
+    field.attr("disabled", true);
+    myClearIntervals();
+    field.toggleClass("disabled_typeField");
+    insertScore();
+}
+
+
 
 
 
